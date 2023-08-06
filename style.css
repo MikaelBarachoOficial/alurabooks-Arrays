@@ -64,7 +64,8 @@ body {
 
 .livros {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1em;
   flex-wrap: wrap;
 }
 

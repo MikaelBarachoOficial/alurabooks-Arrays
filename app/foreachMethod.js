@@ -1,13 +1,14 @@
 function showUpBooks (bookList) {
 
-  console.log(bookList)
-
     const booksField = document.getElementById('livros')
+    booksField.innerHTML = ''
 
     bookList.forEach(book => {
+
+      let bookAvailability = book.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel';
         
-        booksField.innerHTML += `<div class="livro">
-        <img class="livro__imagens" src="${book.imagem}" alt="${book.alt}" />
+      booksField.innerHTML += `<div class="livro">
+        <img class="${bookAvailability}" src="${book.imagem}" alt="${book.alt}" />
         <h2 class="livro__titulo">
           ${book.titulo}
         </h2>
